@@ -10,7 +10,9 @@ $(function () {
             url: '../php/contact.php',
             data: postdata,
             dataType: 'json',
-            success: function(json) {
+            success: function(response) {
+
+                let json = JSON.parse(response)
 
                 if(json.isSuccess)
                 {
